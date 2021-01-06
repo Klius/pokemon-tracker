@@ -29,7 +29,7 @@ function showPokemons(pokemons) {
 		p.textContent = poke["name"].capitalize();
 		var input = document.createElement("input");
 		input.type = "checkbox";
-		input.id = "check" + poke["index"];
+		input.id = poke["index"];
 		input.name = poke["index"];
 		if (poke["gotcha"] != null) {
 			input.checked = poke["gotcha"];
@@ -82,16 +82,17 @@ function loadList() {
 		const fr = new FileReader();
 
 		fr.addEventListener("load", e => {
-			pkmns = JSON.parse(fr.result)
-			for (i = 0; i < pkmns.length; i++) {
-				poke = pkmns[i]
-				console.log(poke)
+			pokemons = JSON.parse(fr.result)
+			checks = document.getElementById("pokemons").getElementsByTagName("INPUT")
+			for (i = 0; i < pokemons.length; i++) {
+				poke = pokemons[i]
 				if (poke["gotcha"] != null) {
-					document.getElementById("check" + poke['index']).checked = poke["gotcha"];
+
+					checks[poke['index'] - 1].checked = poke["gotcha"];
 					updateMonList(poke['index'], poke["gotcha"])
 				}
 				else {
-					document.getElementById("check" + poke['index']).checked = false;
+					checks[poke['index'] - 1].checked = poke["gotcha"];
 					updateMonList(poke['index'], false)
 				}
 			}
