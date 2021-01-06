@@ -96,6 +96,7 @@ function loadList() {
 					updateMonList(poke['index'], false)
 				}
 			}
+			countPokemons()
 		});
 
 		fr.readAsText(file);
