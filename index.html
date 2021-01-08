@@ -1,0 +1,47 @@
+<html>
+
+<head>
+	<title>Pokemon Tracker</title>
+	<link rel="icon" href="img/check.png" type="image/png" />
+	<link rel="stylesheet" type="text/css" href="styles.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta charset="UTF-8">
+</head>
+
+<body>
+	<div class="header">
+		<div class="menu">
+			<div class="menu-item">
+				<p>
+					Catched Pokémons:<span id="pkmnOwned">0</span>&nbsp;
+					<label for="trainerName">Trainer Name:</label>
+					<input id="trainerName" type="text"></input>
+				</p>
+			</div>
+			<div class="menu-item">
+				<p>
+					<button onclick="saveList()"><img src="img/disk-save.png" /></button>
+					<button onclick="document.getElementById('file-selector').click()"><img
+							src="img/disk-open.png" /></button>
+					<input type="file" id="file-selector" accept=".json">
+				</p>
+			</div>
+		</div>
+	</div>
+	<div class="wrapper">
+		<div id="pokemons">
+			<!--
+				<div class="pokemon-button">
+					<label for="001">
+						<img src="https://www.serebii.net/pokearth/sprites/rb/001.png"/>
+						<p>Bulbasaur</p>
+						<input id="001" name="001" type="checkbox"></input>
+					</label>
+				</div>
+				-->
+		</div>
+	</div>
+	<script src="things.js"></script>
+</body>
+
+</html>
