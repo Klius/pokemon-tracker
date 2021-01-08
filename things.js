@@ -31,14 +31,19 @@ function showPokemons(pokemons) {
 		input.type = "checkbox";
 		input.id = poke["index"];
 		input.name = poke["index"];
+		input.className = 'css-checkbox';
 		if (poke["gotcha"] != null) {
 			input.checked = poke["gotcha"];
 		}
+		var checkLabel = document.createElement("label");
+		checkLabel.for = input.name;
+		checkLabel.className = 'css-label';
 		input.onchange = function () { countPokemons(); updateMonList(this.id, this.checked) };
 		//append
 		div.appendChild(img);
 		div.appendChild(p);
 		div.appendChild(input);
+		div.appendChild(checkLabel);
 		label.appendChild(div);
 		document.getElementById("pokemons").appendChild(label);
 	}
