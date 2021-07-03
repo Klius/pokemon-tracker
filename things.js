@@ -1,4 +1,5 @@
 var pkmns;
+var generation = 0
 function load_pokemons(gen, savedURL) {
 	var xmlhttp = new XMLHttpRequest();
 	if (savedURL == null) {
@@ -15,16 +16,17 @@ function load_pokemons(gen, savedURL) {
 }
 
 function showPokemons(pokemons) {
+	imgURL = ["https://www.serebii.net/pokearth/sprites/rb/", "https://www.serebii.net/pokearth/sprites/silver/"];
+	len = [151, pokemons.length]
 	pkmns = pokemons;
-	imgURL = "https://www.serebii.net/pokearth/sprites/rb/";
-	for (i = 0; i < pokemons.length; i++) {
+	for (i = 0; i < len[generation]; i++) {
 		var poke = pokemons[i];
 		var div = document.createElement("DIV");
 		div.className = "pokemon-button";
 		var label = document.createElement("LABEL");
 		label.id = poke["index"];
 		var img = document.createElement("IMG");
-		img.src = imgURL + poke["index"] + ".png";
+		img.src = imgURL[generation] + poke["index"] + ".png";
 		var p = document.createElement("P");
 		p.textContent = poke["name"].capitalize();
 		var input = document.createElement("input");
@@ -88,25 +90,32 @@ function loadList() {
 
 		fr.addEventListener("load", e => {
 			pokemons = JSON.parse(fr.result)
-			checks = document.getElementById("pokemons").getElementsByTagName("INPUT")
-			for (i = 0; i < pokemons.length; i++) {
-				poke = pokemons[i]
-				if (poke["gotcha"] != null) {
-
-					checks[poke['index'] - 1].checked = poke["gotcha"];
-					updateMonList(poke['index'], poke["gotcha"])
-				}
-				else {
-					checks[poke['index'] - 1].checked = poke["gotcha"];
-					updateMonList(poke['index'], false)
-				}
-			}
+			load_mons_from_file(pokemons)
 			countPokemons()
 		});
 
 		fr.readAsText(file);
 	}
 }
+
+function load_mons_from_file(pokemons) {
+	len = [151, pokemons.length]
+	checks = document.getElementById("pokemons").getElementsByTagName("INPUT")
+	for (i = 0; i < len[generation]; i++) {
+		poke = pokemons[i]
+		if (poke["gotcha"] != null) {
+
+			checks[poke['index'] - 1].checked = poke["gotcha"];
+			updateMonList(poke['index'], poke["gotcha"])
+		}
+		else {
+			checks[poke['index'] - 1].checked = poke["gotcha"];
+			updateMonList(poke['index'], false)
+		}
+	}
+}
+
+
 //updates json list so we can save it later
 function updateMonList(pkmnid, checked) {
 	pkmns[parseInt(pkmnid) - 1].gotcha = checked
@@ -124,5 +133,20 @@ function updateMonList(pkmnid, checked) {
 String.prototype.capitalize = function () {
 	return this.charAt(0).toUpperCase() + this.slice(1);
 }
+function change_generation(pkmn_gen) {
+	console.log("changing pokemon gen to:" + String(Number(pkmn_gen) + 1));
+	generation = pkmn_gen
+	clear_pokemons()
+	showPokemons(pkmns)
+	load_mons_from_file(pkmns)
+}
+function clear_pokemons() {
+	document.getElementById("pokemons").innerHTML = "";
+}
+
 load_pokemons(1, null);
 document.getElementById("file-selector").addEventListener('change', loadList);
+document.getElementById("generation-select").addEventListener('change', function () {
+	change_generation(this.value);
+});
+//TODO Save gen on file, detect when load
