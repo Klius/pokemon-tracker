@@ -1,0 +1,402 @@
+[
+    {
+        "index": "152",
+        "name": "Chikorita"
+    },
+    {
+        "index": "153",
+        "name": "Bayleef"
+    },
+    {
+        "index": "154",
+        "name": "Meganium"
+    },
+    {
+        "index": "155",
+        "name": "Cyndaquil"
+    },
+    {
+        "index": "156",
+        "name": "Quilava"
+    },
+    {
+        "index": "157",
+        "name": "Typhlosion"
+    },
+    {
+        "index": "158",
+        "name": "Totodile"
+    },
+    {
+        "index": "159",
+        "name": "Croconaw"
+    },
+    {
+        "index": "160",
+        "name": "Feraligatr"
+    },
+    {
+        "index": "161",
+        "name": "Sentret"
+    },
+    {
+        "index": "162",
+        "name": "Furret"
+    },
+    {
+        "index": "163",
+        "name": "Hoothoot"
+    },
+    {
+        "index": "164",
+        "name": "Noctowl"
+    },
+    {
+        "index": "165",
+        "name": "Ledyba"
+    },
+    {
+        "index": "166",
+        "name": "Ledian"
+    },
+    {
+        "index": "167",
+        "name": "Spinarak"
+    },
+    {
+        "index": "168",
+        "name": "Ariados"
+    },
+    {
+        "index": "169",
+        "name": "Crobat"
+    },
+    {
+        "index": "170",
+        "name": "Chinchou"
+    },
+    {
+        "index": "171",
+        "name": "Lanturn"
+    },
+    {
+        "index": "172",
+        "name": "Pichu"
+    },
+    {
+        "index": "173",
+        "name": "Cleffa"
+    },
+    {
+        "index": "174",
+        "name": "Igglybuff"
+    },
+    {
+        "index": "175",
+        "name": "Togepi"
+    },
+    {
+        "index": "176",
+        "name": "Togetic"
+    },
+    {
+        "index": "177",
+        "name": "Natu"
+    },
+    {
+        "index": "178",
+        "name": "Xatu"
+    },
+    {
+        "index": "179",
+        "name": "Mareep"
+    },
+    {
+        "index": "180",
+        "name": "Flaaffy"
+    },
+    {
+        "index": "181",
+        "name": "Ampharos"
+    },
+    {
+        "index": "182",
+        "name": "Bellossom"
+    },
+    {
+        "index": "183",
+        "name": "Marill"
+    },
+    {
+        "index": "184",
+        "name": "Azumarill"
+    },
+    {
+        "index": "185",
+        "name": "Sudowoodo"
+    },
+    {
+        "index": "186",
+        "name": "Politoed"
+    },
+    {
+        "index": "187",
+        "name": "Hoppip"
+    },
+    {
+        "index": "188",
+        "name": "Skiploom"
+    },
+    {
+        "index": "189",
+        "name": "Jumpluff"
+    },
+    {
+        "index": "190",
+        "name": "Aipom"
+    },
+    {
+        "index": "191",
+        "name": "Sunkern"
+    },
+    {
+        "index": "192",
+        "name": "Sunflora"
+    },
+    {
+        "index": "193",
+        "name": "Yanma"
+    },
+    {
+        "index": "194",
+        "name": "Wooper"
+    },
+    {
+        "index": "195",
+        "name": "Quagsire"
+    },
+    {
+        "index": "196",
+        "name": "Espeon"
+    },
+    {
+        "index": "197",
+        "name": "Umbreon"
+    },
+    {
+        "index": "198",
+        "name": "Murkrow"
+    },
+    {
+        "index": "199",
+        "name": "Slowking"
+    },
+    {
+        "index": "200",
+        "name": "Misdreavus"
+    },
+    {
+        "index": "201",
+        "name": "Unown"
+    },
+    {
+        "index": "202",
+        "name": "Wobbuffet"
+    },
+    {
+        "index": "203",
+        "name": "Girafarig"
+    },
+    {
+        "index": "204",
+        "name": "Pineco"
+    },
+    {
+        "index": "205",
+        "name": "Forretress"
+    },
+    {
+        "index": "206",
+        "name": "Dunsparce"
+    },
+    {
+        "index": "207",
+        "name": "Gligar"
+    },
+    {
+        "index": "208",
+        "name": "Steelix"
+    },
+    {
+        "index": "209",
+        "name": "Snubbull"
+    },
+    {
+        "index": "210",
+        "name": "Granbull"
+    },
+    {
+        "index": "211",
+        "name": "Qwilfish"
+    },
+    {
+        "index": "212",
+        "name": "Scizor"
+    },
+    {
+        "index": "213",
+        "name": "Shuckle"
+    },
+    {
+        "index": "214",
+        "name": "Heracross"
+    },
+    {
+        "index": "215",
+        "name": "Sneasel"
+    },
+    {
+        "index": "216",
+        "name": "Teddiursa"
+    },
+    {
+        "index": "217",
+        "name": "Ursaring"
+    },
+    {
+        "index": "218",
+        "name": "Slugma"
+    },
+    {
+        "index": "219",
+        "name": "Magcargo"
+    },
+    {
+        "index": "220",
+        "name": "Swinub"
+    },
+    {
+        "index": "221",
+        "name": "Piloswine"
+    },
+    {
+        "index": "222",
+        "name": "Corsola"
+    },
+    {
+        "index": "223",
+        "name": "Remoraid"
+    },
+    {
+        "index": "224",
+        "name": "Octillery"
+    },
+    {
+        "index": "225",
+        "name": "Delibird"
+    },
+    {
+        "index": "226",
+        "name": "Mantine"
+    },
+    {
+        "index": "227",
+        "name": "Skarmory"
+    },
+    {
+        "index": "228",
+        "name": "Houndour"
+    },
+    {
+        "index": "229",
+        "name": "Houndoom"
+    },
+    {
+        "index": "230",
+        "name": "Kingdra"
+    },
+    {
+        "index": "231",
+        "name": "Phanpy"
+    },
+    {
+        "index": "232",
+        "name": "Donphan"
+    },
+    {
+        "index": "233",
+        "name": "Porygon"
+    },
+    {
+        "index": "234",
+        "name": "Stantler"
+    },
+    {
+        "index": "235",
+        "name": "Smeargle"
+    },
+    {
+        "index": "236",
+        "name": "Tyrogue"
+    },
+    {
+        "index": "237",
+        "name": "Hitmontop"
+    },
+    {
+        "index": "238",
+        "name": "Smoochum"
+    },
+    {
+        "index": "239",
+        "name": "Elekid"
+    },
+    {
+        "index": "240",
+        "name": "Magby"
+    },
+    {
+        "index": "241",
+        "name": "Miltank"
+    },
+    {
+        "index": "242",
+        "name": "Blissey"
+    },
+    {
+        "index": "243",
+        "name": "Raikou"
+    },
+    {
+        "index": "244",
+        "name": "Entei"
+    },
+    {
+        "index": "245",
+        "name": "Suicune"
+    },
+    {
+        "index": "246",
+        "name": "Larvitar"
+    },
+    {
+        "index": "247",
+        "name": "Pupitar"
+    },
+    {
+        "index": "248",
+        "name": "Tyranitar"
+    },
+    {
+        "index": "249",
+        "name": "Lugia"
+    },
+    {
+        "index": "250",
+        "name": "Ho-oh"
+    },
+    {
+        "index": "251",
+        "name": "Celebi"
+    }
+]
