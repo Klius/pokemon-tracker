@@ -1,6 +1,6 @@
 var pkmns;
 var generation = 0
-function load_pokemons(gen, savedURL) {
+function get_pokemons(gen, savedURL) {
 	var xmlhttp = new XMLHttpRequest();
 	if (savedURL == null) {
 		var url = "gen" + gen + ".js";
@@ -16,7 +16,7 @@ function load_pokemons(gen, savedURL) {
 }
 
 function showPokemons(pokemons) {
-	imgURL = ["https://www.serebii.net/pokearth/sprites/rb/", "https://www.serebii.net/pokearth/sprites/silver/"];
+	imgURL = ["https://www.serebii.net/pokearth/sprites/rb/", "https://www.serebii.net/pokearth/sprites/crystal/"];
 	len = [151, pokemons.length]
 	pkmns = pokemons;
 	for (i = 0; i < len[generation]; i++) {
@@ -61,7 +61,8 @@ function countPokemons() {
 	document.getElementById("pkmnOwned").innerHTML = pkmnCount;
 }
 function saveList() {
-	var file = new Blob([JSON.stringify(pkmns)], { type: "application/json" });
+	var dict = { "gen": generation, "pkmns": pkmns }
+	var file = new Blob([JSON.stringify(dict)], { type: "application/json" });
 	var trainerName = document.getElementById("trainerName").value;
 	if (trainerName == "") { trainerName = "catchedmon" }
 	var a = document.createElement("a"),
@@ -89,8 +90,13 @@ function loadList() {
 		const fr = new FileReader();
 
 		fr.addEventListener("load", e => {
-			pokemons = JSON.parse(fr.result)
-			load_mons_from_file(pokemons)
+			saved_data = JSON.parse(fr.result);
+			change_generation(Number(saved_data["gen"]));
+			document.getElementById("generation-select").value = Number(saved_data["gen"]);
+			pokemons = saved_data["pkmns"];
+			console.log(pokemons);
+			console.log(saved_data);
+			check_mons_from_file(pokemons)
 			countPokemons()
 		});
 
@@ -98,7 +104,7 @@ function loadList() {
 	}
 }
 
-function load_mons_from_file(pokemons) {
+function check_mons_from_file(pokemons) {
 	len = [151, pokemons.length]
 	checks = document.getElementById("pokemons").getElementsByTagName("INPUT")
 	for (i = 0; i < len[generation]; i++) {
@@ -138,15 +144,14 @@ function change_generation(pkmn_gen) {
 	generation = pkmn_gen
 	clear_pokemons()
 	showPokemons(pkmns)
-	load_mons_from_file(pkmns)
+	check_mons_from_file(pkmns)
 }
 function clear_pokemons() {
 	document.getElementById("pokemons").innerHTML = "";
 }
 
-load_pokemons(1, null);
+get_pokemons(1, null);
 document.getElementById("file-selector").addEventListener('change', loadList);
 document.getElementById("generation-select").addEventListener('change', function () {
 	change_generation(this.value);
 });
-//TODO Save gen on file, detect when load
